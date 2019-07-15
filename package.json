@@ -33,30 +33,4 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-<<<<<<< HEAD
-    "bootstrap": "^4.0.0"
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "app.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DanMBau/omnicut.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DanMBau/omnicut/issues"
-  },
-  "homepage": "https://github.com/DanMBau/omnicut#readme"
-=======
-    "concurrently": "^4.1.0",
-    "nodemon": "^1.18.7"
-  },
-  "dependencies": {
-    "axios": "^0.18.0",
-    "express": "^4.16.3",
-    "if-env": "^1.0.4",
-    "mongoose": "^5.3.16"
-  }
->>>>>>> 54aa8e54337af6e8adc5edd60969eead532c2767
 }
