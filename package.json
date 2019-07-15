@@ -27,5 +27,17 @@
   },
   "devDependencies": {
     "bootstrap": "^4.0.0"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanMBau/omnicut.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanMBau/omnicut/issues"
+  },
+  "homepage": "https://github.com/DanMBau/omnicut#readme"
 }
