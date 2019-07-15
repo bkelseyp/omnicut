@@ -1,0 +1,39 @@
+.LoginWrapper {
+padding:  10vh;
+background-color: #dedbd0;
+}
+
+/* OmniCut Colors 
+
+darker: #1a1f1d;
+client: #264c59;
+vendor: #3696a2 
+accent: #6b857e
+pink: #eb857e
+light: #dedbd0
+
+*/
+
+.InnerForm {
+    padding-left: 10vh;
+    padding-right: 10vh;
+}
+
+.welcome-header {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    /* margin-top: 7vh; */
+}
+
+.welcome-subHeader {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    /* margin-top: 7vh; */
+}
+.acctQuestion{
+    text-align: center;
+
+}
