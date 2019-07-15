@@ -19,7 +19,7 @@ class VendorAvailabilityWrapper extends React.Component {
 
     render() {
         return (
-            <>
+            <div className='container'>
                 <VendorAvailabilityToggle 
                     handleAvailabilityToggle={this.handleAvailabilityToggle}
                     setAvailabilityView={this.state.setAvailabilityView}
@@ -29,7 +29,7 @@ class VendorAvailabilityWrapper extends React.Component {
                 <SetVendorAvailability />:
                 <ViewVendorAvailability /> 
                 }
-            </>
+            </div>
         )
     }
 }

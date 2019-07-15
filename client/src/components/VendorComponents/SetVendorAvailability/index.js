@@ -1,5 +1,6 @@
 import React from 'react';
 import VendorTimeSelect from '../VendorTimeSelect';
+import './style.css';
 
 
 class SetVendorAvailability extends React.Component {
@@ -27,7 +28,7 @@ class SetVendorAvailability extends React.Component {
 
     handleFormChange = (event, input_name, startEnd) => {
         this.setState({
-            formData: {...this.state.formData, [input_name + startEnd] : event.target.value}
+            formData: { ...this.state.formData, [input_name + startEnd]: event.target.value }
         })
     }
 
@@ -39,17 +40,19 @@ class SetVendorAvailability extends React.Component {
     render() {
         return (
             <>
-                <h3>Set availability</h3>
-                <form onSubmit={this.handleSetAvailability}>
-                    <VendorTimeSelect  header="Sunday" formData={() => this.state.formData} handleFormChange={this.handleFormChange}/>
-                    <VendorTimeSelect  header="Monday" formData={() => this.state.formData} handleFormChange={this.handleFormChange}/>
-                    <VendorTimeSelect  header="Tuesday" formData={() => this.state.formData} handleFormChange={this.handleFormChange}/>
-                    <VendorTimeSelect  header="Wednesday" formData={() => this.state.formData} handleFormChange={this.handleFormChange}/>
-                    <VendorTimeSelect  header="Thursday" formData={() => this.state.formData} handleFormChange={this.handleFormChange}/>
-                    <VendorTimeSelect  header="Friday" formData={() => this.state.formData} handleFormChange={this.handleFormChange}/>
-                    <VendorTimeSelect  header="Saturday" formData={() => this.state.formData} handleFormChange={this.handleFormChange}/>
-                    <button type='submit' value='Submit'>Submit</button>
-                </form>
+                <h3 className='text-center my-3'>Set availability</h3>
+                <div className='d-flex justify-content-center mb-5'>
+                    <form onSubmit={this.handleSetAvailability}>
+                        <VendorTimeSelect header="Sunday" formData={() => this.state.formData} handleFormChange={this.handleFormChange} />
+                        <VendorTimeSelect header="Monday" formData={() => this.state.formData} handleFormChange={this.handleFormChange} />
+                        <VendorTimeSelect header="Tuesday" formData={() => this.state.formData} handleFormChange={this.handleFormChange} />
+                        <VendorTimeSelect header="Wednesday" formData={() => this.state.formData} handleFormChange={this.handleFormChange} />
+                        <VendorTimeSelect header="Thursday" formData={() => this.state.formData} handleFormChange={this.handleFormChange} />
+                        <VendorTimeSelect header="Friday" formData={() => this.state.formData} handleFormChange={this.handleFormChange} />
+                        <VendorTimeSelect header="Saturday" formData={() => this.state.formData} handleFormChange={this.handleFormChange} />
+                        <button type='submit' value='Submit' className='col-12 btn-lg btn-secondary'>Submit</button>
+                    </form>
+                </div>
             </>
         )
     }
