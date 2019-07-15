@@ -1,31 +1,43 @@
-const express = require("express");
+// Web Scraper Homework Solution Example
+// (be sure to watch the video to see
+// how to operate the site in the browser)
+// -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
 
-const mongoose = require("mongoose");
-const routes = require("./routes");
-const app = express();
-const PORT = process.env.PORT || 3001;
+// Require our dependencies
+var express = require("express");
+var mongoose = require("mongoose");
+var exphbs = require("express-handlebars");
 
-// Configure body parsing for AJAX requests
+// Set up our port to be either the host's designated port, or 3000
+var PORT = process.env.PORT || 3000;
+
+// Instantiate our Express App
+var app = express();
+
+// Require our routes
+var routes = require("./routes");
+
+// Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// Serve up static assets
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
+// Make public a static folder
+app.use(express.static("public"));
 
-// Add routes, both API and view
+// Connect Handlebars to our Express app
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
+// Have every request go through our route middleware
 app.use(routes);
 
-// Connect to the Mongo DB
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://user1:password1@ds125871.mlab.com:25871/heroku_0xn0jnk7",
-  {
-    useCreateIndex: true,
-    useNewUrlParser: true
-  }
-);
+// If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
-// Start the API server
-app.listen(PORT, () =>
-  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`)
-);
+// Connect to the Mongo DB
+mongoose.connect(MONGODB_URI);
+
+// Listen on the port
+app.listen(PORT, function() {
+  console.log("Listening on port: " + PORT);
+});
+
