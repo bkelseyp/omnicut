@@ -1,20 +1,21 @@
 import React from 'react';
+import './style.css'
 
 const VendorAvailabilityToggle = props => {
     console.log(props.setAvailabilityView)
     if (props.setAvailabilityView) {
         return (
-            <>
-                <span className='not-checked p-2 pt-3'>Set Your Availability</span>
-                <button onClick={props.handleAvailabilityToggle} className='toggle-btn'>View Your Availability</button>
-            </>
+            <div className='row d-flex justify-content-center'>
+                <span className='not-checked p-2 pt-3 col-sm-4 text-center border not-checked-custom'>Set Your Availability</span>
+                <button onClick={props.handleAvailabilityToggle} className='toggle-btn col-sm-4 text-center btn-lg btn-secondary'>View Your Availability</button>
+            </div>
         )
     } else {
         return (
-            <>
-                <button onClick={props.handleAvailabilityToggle} className='toggle-btn'>Set Your Availability</button>
-                <span className='not-checked p-2 pt-3'>View Your Availability</span>
-            </>
+            <div className='row d-flex justify-content-center'>            
+                <button onClick={props.handleAvailabilityToggle} className='toggle-btn col-sm-4 text-center btn-lg btn-secondary'>Set Your Availability</button>
+                <span className='not-checked p-2 pt-3 col-sm-4 text-center border not-checked-custom'>View Your Availability</span>
+            </div>
         )
     }
 }

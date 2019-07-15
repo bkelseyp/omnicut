@@ -3,7 +3,7 @@ import VendorAvailabilityCard from '../VendorAvailabilityCard';
 
 const ViewVendorAvailability = () => (
     <>
-        <h3>Your Availabilities</h3>
+        <h3 className='text-center my-3'>Your Availabilities</h3>
         <div className='d-flex flex-wrap justify-content-center'>
             <VendorAvailabilityCard>Sunday</VendorAvailabilityCard>
             <VendorAvailabilityCard>Monday</VendorAvailabilityCard>
