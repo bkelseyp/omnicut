@@ -1,0 +1,41 @@
+/* OmniCut Colors 
+
+darker: #1a1f1d;
+client: #264c59;
+vendor: #3696a2 
+accent: #6b857e
+pink: #eb857e
+light: #dedbd0
+
+*/
+
+.Hero-subHeader {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 3vh;
+}
+
+.Hero-wrapper3 {
+    background-color: #6b857e;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    text-align: center;
+}
+.Hero-wrapper4 {
+     background-color: #eb857e;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    text-align: center;
+}
+.Hero-wrapper5 {
+    background-color: #1a1f1d;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    text-align: center;
+}

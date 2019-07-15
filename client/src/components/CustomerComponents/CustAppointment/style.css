@@ -1,0 +1,6 @@
+.cust-appointment {
+    border: 2px solid blue;
+    padding: 5px 10px;
+    margin: 10px;
+    flex: 0 0 auto;
+}

@@ -1,0 +1,10 @@
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.book-appt-btn {
+    width: 200px;
+    height: 50px;
+}

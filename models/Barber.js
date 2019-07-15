@@ -17,7 +17,11 @@ new mongoose.Schema({
     appointments: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Appointments"
-    }]
+    }],
+    // appointmentPrice:{
+    //     type: Number,
+    //     required: true
+    // },
 });
 
 module.exports = mongoose.model('Barber', BarberSchema);

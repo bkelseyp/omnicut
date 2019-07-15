@@ -1,3 +1,4 @@
+
 var mongoose = require("mongoose");
 
 var AppointmentSchema = new mongoose.Schema({
@@ -10,7 +11,12 @@ var AppointmentSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "User"
     },
-    Notes: String,
-})
+    notes: String
+    
+    // service:{
+    //   type: String,
+    //   required: true
+    // }
+});
 
-module.exports = mongoose.model("Appointments", AppointmentSchema)
+module.exports = mongoose.model("Appointments", AppointmentSchema);

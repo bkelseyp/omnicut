@@ -1,0 +1,15 @@
+.zip-input-wrapper {
+    border: 2px solid red;
+    margin: 15px auto;
+    width: 70%;   
+}
+
+.flex-row {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.zip-message {
+    color: #f00;
+}

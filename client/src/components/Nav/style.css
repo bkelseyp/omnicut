@@ -1,0 +1,21 @@
+.brandLogo {
+    font-family: 'Ultra', serif;
+    font-size: x-large;
+}
+
+.brandPageNames {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: small;  
+}
+.navLinkColor {
+    color:red;
+}
+
+.textColor {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: small;  
+}
