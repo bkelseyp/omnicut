@@ -1,45 +1,66 @@
+const express = require('express');
+const mongoose = require('mongoose');
+const routes = require('./routes');
+
+const app = express();
+const PORT = process.env.PORT || 3001;
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static("client/build"))
+}
+
+app.use(routes);
+
+const uri = process.env.MONGODB_URI || "mongodb://localhost/reactplayground"
+
+mongoose.connect(uri, { useNewUrlParser: true }).then(
+    () => {
+        console.log("Connected to Mongo")
+    },
+    err => {
+        console.log("error connecting to mongo: ")
+        console.log(err)
+    })
+
+app.listen(PORT, ()=> console.log(`Listening on PORT: ${PORT}`));
+
 // Web Scraper Homework Solution Example
 // (be sure to watch the video to see
 // how to operate the site in the browser)
 // -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
 
-// Require our dependencies
-var express = require("express");
-var mongoose = require("mongoose");
-var exphbs = require("express-handlebars");
+// var express = require("express");
+// var mongoose = require("mongoose");
+// var exphbs = require("express-handlebars");
 
 // Set up our port to be either the host's designated port, or 3000
 var PORT = process.env.PORT || 3001;
 
-// Instantiate our Express App
-var app = express();
+// var app = express();
 
-// Require our routes
-var routes = require("./routes");
+// var routes = require("./routes");
 
-// Parse request body as JSON
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-// Make public a static folder
-app.use(express.static("public"));
+// app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
+// app.use(express.static("public"));
 
-// Connect Handlebars to our Express app
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+// app.set("view engine", "handlebars");
 
-// Have every request go through our route middleware
-app.use(routes);
+// app.use(routes);
+
+// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/barbershop";
 
 console.log(MONGODB_URI);
 
-// Connect to the Mongo DB
-mongoose.connect(MONGODB_URI);
 
-// Listen on the port
-app.listen(PORT, function() {
-  console.log("Listening on port: " + PORT);
-});
+// app.listen(PORT, function() {
+//   console.log("Listening on port: " + PORT);
+// });
 
