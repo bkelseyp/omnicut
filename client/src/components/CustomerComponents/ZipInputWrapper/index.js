@@ -26,19 +26,21 @@ class ZipInputWrapper extends React.Component {
         return (
             <div className='zip-input-wrapper generic-body-font'>
                 <h3 className='flex-row '>Where do you want to schedule your appointment?</h3>
-                <form onSubmit={this.handleSubmitZip}>
-                    <div className='flex-row'>
-                        <input
-                            placeholder='zipcode'
-                            type='number'
-                            id='zip-input'
-                            style={zipInputStyle}
-                        />
-                    </div>
-                    <div className='flex-row'>
-                        <button type='submit'>Submit</button>
-                    </div>
-                </form>
+                <div className='d-flex justify-content-center'>
+                    <form onSubmit={this.handleSubmitZip} className='flex-row'>
+                        <div className='flex-row'>
+                            <input
+                                placeholder='zipcode'
+                                type='number'
+                                id='zip-input'
+                                style={zipInputStyle}
+                            />
+                        </div>
+                        <div className='flex-row'>
+                            <button type='submit'>Submit</button>
+                        </div>
+                    </form>
+                </div>
                 <div style={zipMessageStyle} className='zip-message justify-content-center'>
                     <p>Please enter a valid zipcode.</p>
                 </div>
