@@ -2,12 +2,13 @@ import React from 'react';
 
 const VendorTimeSelect = props => {
     return (
-        <div class="form-group border p-3">
+
+        <div class="form-group border rounded p-5">
             <h4 className='text-center'>{props.header}</h4>
             <label for="exampleFormControlSelect1">Start time:</label>
             <select value={props.formData[props.header.toLowerCase() + 'Start']} onChange={(e) => props.handleFormChange(e, props.header.toLowerCase(), 'Start')}
                 className="form-control mb-3" id="exampleFormControlSelect1">
-                <option>Select a start time</option>
+                <option> Select a start time</option>
                 <option>1:00am</option>
                 <option>2:00am</option>
                 <option>3:00am</option>

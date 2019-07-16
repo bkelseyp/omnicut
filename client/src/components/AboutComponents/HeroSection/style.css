@@ -9,6 +9,20 @@ light: #dedbd0
 
 */
 
+.bkgndWrapper {
+    background-color: #dedbd0;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.devNameFont {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
 .Hero-subHeader {
     text-transform: uppercase;
     font-weight: 700;
