@@ -19,12 +19,12 @@ class VendorList extends React.Component {
         // console.log('DummyBarbers', DummyBarbers);
         // console.log('props', this.props.barbers)
         // console.log('dummy', DummyBarbers)
-        const dummyBarbers = this.props.barbers[0].map(barber => (
+        const dummyBarbers = this.props.barbers.map(barber => (
             <VendorCard
                 name={barber.name}
-                price={barber.price}
-                message={barber.message}
-                key={barber.key}
+                price={barber.basePrice}
+                message={barber.bio}
+                key={barber.id}
                 HandleModalOpen={this.props.HandleModalOpen}                
             />
 
