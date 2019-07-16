@@ -15,19 +15,23 @@ class VendorWrapper extends React.Component {
         this.state = {
             barbers: []
         }
-
         const date = new Date();
         const dayOfWeek = date.getDay()
         console.log('date:', date);
         console.log('day of week:', dayOfWeek);
     }
-    
+
     loadBarbers = () => {
         console.log('func call')
         API.getBarbers()
             .then(res => {
+                console.log('zip in vendorWrapper', this.props.clientZip);
                 console.log('res', res.data);
-                this.setState({ barbers: res.data })
+                const localClientZip = parseInt(this.props.clientZip);
+                console.log(res.data.map(barber => barber.zipcode))
+                const localBarbers = res.data.filter(barber => barber.zipcode === localClientZip);
+                console.log('localBarbers', localBarbers);
+                this.setState({ barbers: localBarbers })
             })
             .catch(err => console.log(err));
     };
@@ -37,10 +41,10 @@ class VendorWrapper extends React.Component {
             return (
                 <>
                     <div className='vendor-wrapper container d-flex flex-wrap generic-body-font'>
-                        <FilterWrapper 
-                                apptDay={this.props.apptDay}
-                                handleFilterChange={this.props.handleFilterChange}
-    
+                        <FilterWrapper
+                            apptDay={this.props.apptDay}
+                            handleFilterChange={this.props.handleFilterChange}
+
                         />
                         <VendorList
                             HandleModalOpen={this.props.HandleModalOpen}

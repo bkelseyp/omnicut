@@ -19,7 +19,8 @@ class BookApptWrapper extends React.Component {
             showBookingModal: false,
             zipErrorBorder: false,
             // Weekday checkboxes
-            apptDay: '8'
+            apptDay: '8',
+            clientZip: ''
         }
     };
 
@@ -36,7 +37,7 @@ class BookApptWrapper extends React.Component {
         this.setState({ displayZipInput: true })
     };
 
-    HandleDisplayVendors = () => {
+    HandleDisplayVendors = clientZip => {
         // This block below varifies that the input is 5 digits long. If not, it displays a message to user.
         const userZip = document.getElementById('zip-input').value;
         const zipREGEX = /^\d{5}$/;
@@ -45,7 +46,7 @@ class BookApptWrapper extends React.Component {
         // Scroll down to vendor wrapper
         scroll.scrollTo(530);
         if (zipResult) {
-            this.setState({ displayVendors: true, displayZipMessage: false, zipErrorBorder: false })
+            this.setState({ displayVendors: true, displayZipMessage: false, zipErrorBorder: false, clientZip: clientZip })
         } else {
             this.setState({ displayZipMessage: true, zipErrorBorder: true })
         }
@@ -69,6 +70,7 @@ class BookApptWrapper extends React.Component {
                         HandleDisplayVendors={this.HandleDisplayVendors}
                         displayZipMessage={this.state.displayZipMessage}
                         zipErrorBorder={this.state.zipErrorBorder}
+                        handleZipChange={this.handleZipChange}
                     />
                     {/* Element is part of the smooth scroll npm package */}
                     <Element name='vendor-wrapper'>
@@ -79,6 +81,7 @@ class BookApptWrapper extends React.Component {
                             showBookingModal={this.state.showBookingModal}
                             apptDay={this.state.apptDay}
                             handleFilterChange={this.handleFilterChange}
+                            clientZip={this.state.clientZip}
                         />
                     </Element>
                 </>

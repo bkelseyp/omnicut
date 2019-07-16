@@ -4,18 +4,25 @@ import './style.css';
 class ZipInputWrapper extends React.Component {
     constructor(props) {
         super(props);
-        // this.state = {
+        this.state = {
+            zipInputValue: '',
+        }
+    }
 
-        // }
+    handleZipChange = event => {
+        this.setState({ zipInputValue: event.target.value })
     }
 
     handleSubmitZip = event => {
         event.preventDefault();
-        this.props.HandleDisplayVendors();
+        const clientZip = this.state.zipInputValue;
+        alert(clientZip);
+
+        this.props.HandleDisplayVendors(clientZip);
     }
 
     render() {
-        console.log('zip input props', this.props);
+        // console.log('zip input props', this.props);
 
         const zipMessageStyle = this.props.displayZipMessage ?
             { display: 'flex' } : { display: 'none' };
@@ -33,6 +40,7 @@ class ZipInputWrapper extends React.Component {
                                 placeholder='zipcode'
                                 type='number'
                                 id='zip-input'
+                                onChange={this.handleZipChange}
                                 style={zipInputStyle}
                             />
                         </div>

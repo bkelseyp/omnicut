@@ -19,7 +19,7 @@ class VendorList extends React.Component {
         // console.log('DummyBarbers', DummyBarbers);
         // console.log('props', this.props.barbers)
         // console.log('dummy', DummyBarbers)
-        const dummyBarbers = this.props.barbers.map(barber => (
+        const dbBarbers = this.props.barbers.map(barber => (
             <VendorCard
                 name={barber.name}
                 price={barber.basePrice}
@@ -31,48 +31,9 @@ class VendorList extends React.Component {
         ))
         return (
             <div className='vendor-list col-md-9 col-12'>
-                {dummyBarbers}
+                {dbBarbers}
             </div>
         )
-        // return (
-        //     <>
-        //         <div className='vendor-list col-md-9 col-12'>
-        //             {/* <VendorCard 
-        //                 HandleModalOpen={props.HandleModalOpen}
-        //                 handleModalClose={props.handleModalClose}
-        //             />
-        //             <VendorCard 
-        //                 HandleModalOpen={props.HandleModalOpen}
-        //                 handleModalClose={props.handleModalClose}
-        //             />
-        //             <VendorCard 
-        //                 HandleModalOpen={props.HandleModalOpen}
-        //                 handleModalClose={props.handleModalClose}
-        //             />
-        //             <VendorCard 
-        //                 HandleModalOpen={props.HandleModalOpen}
-        //                 handleModalClose={props.handleModalClose}
-        //             />
-        //             <VendorCard 
-        //                 HandleModalOpen={props.HandleModalOpen}
-        //                 handleModalClose={props.handleModalClose}
-        //             />
-        //             <VendorCard 
-        //                 HandleModalOpen={props.HandleModalOpen}
-        //                 handleModalClose={props.handleModalClose}
-        //             />
-        //             <VendorCard 
-        //                 HandleModalOpen={props.HandleModalOpen}
-        //                 handleModalClose={props.handleModalClose}
-        //             />
-        //             <VendorCard 
-        //                 HandleModalOpen={props.HandleModalOpen}
-        //                 handleModalClose={props.handleModalClose}
-        //             /> */}
-
-        //         </div>
-        //     </>
-        // )
     }
 }
 
