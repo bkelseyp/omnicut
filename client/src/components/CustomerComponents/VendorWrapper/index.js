@@ -4,7 +4,8 @@ import FilterWrapper from '../FilterWrapper';
 import './style.css';
 import BookingModalWrapper from '../BookingModalWrapper';
 // Routes
-import API from '../../utils/API';
+import API from '../../utils/API.js';
+import DummyBarbers from './DummyBarbers';
 
 
 
@@ -12,7 +13,7 @@ class VendorWrapper extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            barbers: []
+            barbers: [DummyBarbers]
         }
 
         const date = new Date();
@@ -22,6 +23,7 @@ class VendorWrapper extends React.Component {
     }
     
     loadBarbers = () => {
+        console.log('func call')
         API.getBarbers()
             .then(res => {
                 console.log('res', res);
