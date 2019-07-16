@@ -19,7 +19,7 @@ class BookApptWrapper extends React.Component {
             showBookingModal: false,
             zipErrorBorder: false,
             // Weekday checkboxes
-            apptDay: ''
+            apptDay: '8'
         }
     };
 

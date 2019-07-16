@@ -13,7 +13,7 @@ class VendorWrapper extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            barbers: [DummyBarbers]
+            barbers: []
         }
 
         const date = new Date();
@@ -27,7 +27,7 @@ class VendorWrapper extends React.Component {
         API.getBarbers()
             .then(res => {
                 console.log('res', res.data);
-                // this.setState({ barbers: res.data })
+                this.setState({ barbers: res.data })
             })
             .catch(err => console.log(err));
     };
