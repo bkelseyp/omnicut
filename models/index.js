@@ -1,5 +1,7 @@
 module.exports = {
     Appointment: require("./Appointment"),
-    Note: require("./Note")
+    Availabilities: require("./Availabilities"),
+    Barber: require("./Barber"),
+    User: require("./User")
   };
 
