@@ -44,7 +44,7 @@ class ZipInputWrapper extends React.Component {
                             />
                         </div>
                         <div className='flex-row'>
-                            <button type='submit'>Submit</button>
+                            <button type='submit' className='btn btn-light rounded-pill'>Submit</button>
                         </div>
                     </form>
                 </div>

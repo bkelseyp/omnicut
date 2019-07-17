@@ -45,10 +45,10 @@ class AvailabilitiesForm extends React.Component {
                     </div>
                     <div className='d-flex justify-content-center mt-4'>
                         <div className="col-6">
-                            <button onClick={this.props.handleCloseBarber} className='btn btn-lrg mx-1 mb-2'>Back</button>
+                            <button onClick={this.props.handleCloseBarber} className='btn btn-lrg btn-light rounded-pill mx-1 mb-2'>Back</button>
                         </div>
                         <div className="col-6">
-                            <button type="submit" className='btn btn-lrg mx-1 mb-2'>Book</button>
+                            <button type="submit" className='btn btn-lrg btn-light rounded-pill mx-1 mb-2'>Book</button>
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,6 @@
 import React from 'react';
 import VendorCard from '../VendorCard';
 import BookingModalWrapper from '../BookingModalWrapper';
-import CustAppointmentsWrapper from '../CustAppointmentsWrapper';
 import './style.css';
 // import DummyBarbers from '../VendorWrapper/DummyBarbers';
 
