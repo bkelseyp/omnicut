@@ -29,7 +29,7 @@ class VendorWrapper extends React.Component {
                 console.log('res', res.data);
                 const localClientZip = parseInt(this.props.clientZip);
                 const localBarbers = res.data.filter(barber => barber.zipcode === localClientZip);
-                localBarbers.toString();
+                // localBarbers.toString();
                 console.log('localBarbers', localBarbers);
                 this.setState({ barbers: localBarbers })
             })
