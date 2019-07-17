@@ -1,14 +1,15 @@
 .vendor-card {
     border: 2px solid black;
-    margin: 10px;
+    /* margin: 10px; */
     min-width: 190px;
 }
 
 .vendor-card:hover {
-    transform: scale(1.02);
+    font-style: bold;
 }
 
 .book-vendor-btn {
     margin: 10px;
     text-align: center;
 }
+

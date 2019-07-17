@@ -1,3 +1,8 @@
 .vendor-message-input {
-    width: 80%;
+    /* width: 80%; */
+}
+
+.availabilities-wrapper {
+    width: 100%;
+    min-width: 80px;
 }
