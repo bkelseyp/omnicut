@@ -1,5 +1,5 @@
 .LoginWrapper {
-padding:  10vh;
+/* padding:  10vh; */
 background-color: #dedbd0;
 }
 
@@ -13,6 +13,10 @@ pink: #eb857e
 light: #dedbd0
 
 */
+
+.formMargin {
+    margin: 0 auto;
+}
 
 .InnerForm {
     padding-left: 10vh;
