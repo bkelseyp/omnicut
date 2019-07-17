@@ -5,7 +5,7 @@ import './style.css';
 import BookingModalWrapper from '../BookingModalWrapper';
 // Routes
 import API from '../../../utils/API.js';
-import DummyBarbers from './DummyBarbers';
+// import DummyBarbers from './DummyBarbers';
 
 
 
@@ -28,8 +28,8 @@ class VendorWrapper extends React.Component {
                 console.log('zip in vendorWrapper', this.props.clientZip);
                 console.log('res', res.data);
                 const localClientZip = parseInt(this.props.clientZip);
-                console.log(res.data.map(barber => barber.zipcode))
                 const localBarbers = res.data.filter(barber => barber.zipcode === localClientZip);
+                localBarbers.toString();
                 console.log('localBarbers', localBarbers);
                 this.setState({ barbers: localBarbers })
             })
