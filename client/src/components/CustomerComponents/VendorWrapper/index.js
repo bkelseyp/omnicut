@@ -14,13 +14,14 @@ class VendorWrapper extends React.Component {
         super(props);
         this.state = {
             barbers: [],
-            apptDay: 'all'
+            apptDay: 'all',
         }
         const date = new Date();
         const dayOfWeek = date.getDay()
         console.log('date:', date);
         console.log('day of week:', dayOfWeek);
     }
+
 
      // sets state every time the filter boxes change.
      handleFilterChange = event => {
@@ -52,6 +53,7 @@ class VendorWrapper extends React.Component {
 
     render() {
         if (this.props.displayVendors === true) {
+            console.log('times', this.state.barbers[0])
             return (
                 <>
                     <div className='vendor-wrapper container d-flex flex-wrap generic-body-font'>
@@ -60,15 +62,9 @@ class VendorWrapper extends React.Component {
                             handleFilterChange={this.handleFilterChange}
                         />
                         <VendorList
-                            HandleModalOpen={this.props.HandleModalOpen}
+                            HandleModalOpen={this.HandleModalOpen}
                             loadBarbers={this.loadBarbers}
                             barbers={this.state.barbers}
-                        />
-                    </div>
-                    <div>
-                        <BookingModalWrapper
-                            showBookingModal={this.props.showBookingModal}
-                            handleModalClose={this.props.handleModalClose}
                         />
                     </div>
                 </>

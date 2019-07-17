@@ -16,7 +16,6 @@ class BookApptWrapper extends React.Component {
             displayVendors: false,
             displayFilters: false,
             displayZipMessage: false,
-            showBookingModal: false,
             zipErrorBorder: false,
             // Weekday checkboxes
             clientZip: ''
@@ -45,14 +44,14 @@ class BookApptWrapper extends React.Component {
         }
     };
 
-    // These methods handle opening and closing of the modal for booking
-    HandleModalOpen = () => {
-        this.setState({ showBookingModal: true })
-    }
+    // // These methods handle opening and closing of the modal for booking
+    // HandleModalOpen = () => {
+    //     this.setState({ showBookingModal: true })
+    // }
 
-    handleModalClose = () => {
-        this.setState({ showBookingModal: false })
-    }
+    // handleModalClose = () => {
+    //     this.setState({ showBookingModal: false })
+    // }
 
     render() {
         if (this.state.displayZipInput) {

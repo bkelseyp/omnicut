@@ -1,6 +1,7 @@
 import React from 'react';
 import TimeSlotButton from '../TimeSlotButton';
 import './style.css'
+import TimeSlotList from '../TimeSlotList';
 
 class AvailabilitiesForm extends React.Component {
     constructor(props) {
@@ -19,19 +20,26 @@ class AvailabilitiesForm extends React.Component {
     }
 
 
-    render(props) {
-        console.log(this.state.timeSlot)
+    render() {
+        const times = this.props.timeSlots || [];
+        console.log('form barbersss', times.timeSlots);
+        const TimesList = times.map(time => (
+            <TimeSlotButton
+                handleChange={this.handleChange}
+                timeSlot={this.state.timeSlot}
+            >
+                {time}
+            </TimeSlotButton>
+        ))
+
         // I guess this will contain the available times logic when we know what the data will look like...
-        let availableTimes = [];
 
         return (
-            <form onSubmit={this.handleBookAppt}>
-                <div className='availabilities-wrapper p-3'>
-                    <h3>Availabilities:</h3>
-                    <hr />
-                    <div className='time-slot-buttons text-center mb-3'>
-                        {/* Children will eventually be {this.whatever} */}
-                        <TimeSlotButton
+            <form className='availabilities-wrapper' onSubmit={this.handleBookAppt}>
+                <div>
+                    <div className='time-slot-buttons text-center mb-3 d-flex flex-wrap'>
+                        {TimesList}
+                        {/* <TimeSlotButton
                             handleChange={this.handleChange}
                             timeSlot={this.state.timeSlot}
                         >
@@ -60,11 +68,11 @@ class AvailabilitiesForm extends React.Component {
                             timeSlot={this.state.timeSlot}
                         >
                             3:00pm
-                        </TimeSlotButton>
+                        </TimeSlotButton> */}
                     </div>
-                    <div className='d-flex justify-content-center'>
+                    {/* <div className='d-flex justify-content-center'>
                         <h4>Note to vendor:</h4>
-                    </div>
+                    </div> */}
                     <div className='d-flex justify-content-center'>
                         <textarea placeholder='Enter message' className='vendor-message-input'></textarea>
                     </div>
