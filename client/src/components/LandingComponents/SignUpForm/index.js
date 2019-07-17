@@ -17,12 +17,8 @@ class SignUpForm extends React.Component {
 
     handleSubmit = event => {
         event.preventDefault();
-        // console.log(this.state.name)
-        // console.log(this.state.email)
-        // console.log(this.state.password)
-        // console.log(this.state.zipcode)
-        // console.log(this.state.basePrice)
-        // console.log(this.state.bio)
+        // When form is submitted, we create a newBarber object, containing the values from the user. 
+        // This should then be passed through axios 
         const newBarber = {
             name: this.state.name,
             email: this.state.email,
