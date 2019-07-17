@@ -1,9 +1,10 @@
 import React from 'react';
 import VendorAvailabilityCard from '../VendorAvailabilityCard';
+import './style.css';
 
 const ViewVendorAvailability = () => (
     <>
-        <h3 className='text-center my-3'>Your Availabilities</h3>
+        <h3 className='availPageHeader text-center my-3 mt-5'>Your Availabilities</h3>
         <div className='d-flex flex-wrap justify-content-center'>
             <VendorAvailabilityCard>Sunday</VendorAvailabilityCard>
             <VendorAvailabilityCard>Monday</VendorAvailabilityCard>

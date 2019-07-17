@@ -1,3 +1,18 @@
 .not-checked-custom {
     font-size: 1.2em;
 }
+
+#notAvailToggle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: large;  
+
+}
+
+.availToggle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: medium;  
+}

@@ -3,3 +3,17 @@ form {
     max-width: 600px;
     min-width: 300px;
 }
+
+.selectPageHeader {
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+
+.textSub {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}

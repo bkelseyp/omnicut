@@ -4,7 +4,7 @@ import HeroSection from '../../components/AboutComponents/HeroSection';
 
 const About = () => (
     <>
-    <HeroCarousel />
+        <HeroCarousel />
         <HeroSection />
     </>
 );
