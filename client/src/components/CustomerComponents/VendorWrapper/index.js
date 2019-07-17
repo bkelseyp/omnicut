@@ -42,7 +42,6 @@ class VendorWrapper extends React.Component {
                 // localBarbers.toString();
 
                 // console.log('test', localBarbers.map(barber => barber.daysAvailable))
-
                 const dailyBarbers = localBarbers.filter(barber => barber.daysAvailable.includes(this.state.apptDay))
                 console.log('daily', dailyBarbers);
                 console.log('localBarbers', localBarbers);

@@ -16,7 +16,6 @@ class ZipInputWrapper extends React.Component {
     handleSubmitZip = event => {
         event.preventDefault();
         const clientZip = this.state.zipInputValue;
-
         this.props.HandleDisplayVendors(clientZip);
     }
 

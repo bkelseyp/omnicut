@@ -42,8 +42,8 @@ class VendorCard extends React.Component {
             return (
                 <div className='vendor-card col-md-4 pt-3'>
                     <h3 className='text-center'>{this.props.name}</h3>
-                    <p><strong>Base Price: </strong> {this.props.price}</p>
-                    <p><em>"{this.props.message}"</em></p>
+                    <p className='text-center'><strong>Base Price: </strong> ${this.props.price}</p>
+                    <p className='text-center'><em>"{this.props.message}"</em></p>
                     <div className='d-flex justify-content-center'>
                         <OpenBarberBtn
                             handleOpenBarber={this.handleOpenBarber}
