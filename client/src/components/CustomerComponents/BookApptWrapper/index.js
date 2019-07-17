@@ -22,7 +22,8 @@ class BookApptWrapper extends React.Component {
             zipErrorBorder: false,
             // Weekday checkboxes
             clientZip: '',
-            isBooked: false
+            isBooked: false,
+            apptDay: 'all'
         }
     };
 
@@ -43,10 +44,11 @@ class BookApptWrapper extends React.Component {
         const zipREGEX = /^\d{5}$/;
         // test method returns true or false
         const zipResult = zipREGEX.test(clientZip);
+        console.log(clientZip);
         // Scroll down to vendor wrapper
         if (zipResult) {
-            scroll.scrollTo(530);
-            this.setState({ displayVendors: true, displayZipMessage: false, zipErrorBorder: false, clientZip: clientZip })
+            // scroll.scrollTo(530);
+            this.setState({ displayVendors: false, displayZipMessage: false, zipErrorBorder: false, clientZip: clientZip })
             this.loadBarbers()
         } else {
             this.setState({ displayZipMessage: true, zipErrorBorder: true })
@@ -58,17 +60,15 @@ class BookApptWrapper extends React.Component {
         API.getBarbers()
             .then(res => {
                 // console.log('zip in vendorWrapper', this.props.clientZip);
-                console.log('res', res.data);
+                // console.log('res', res.data);
                 const localClientZip = parseInt(this.state.clientZip);
-                console.log('client zip', localClientZip);
+                // console.log('client zip', localClientZip);
                 const localBarbers = res.data.filter(barber => barber.zipcode === localClientZip);
-                // localBarbers.toString();
-
-                // console.log('test', localBarbers.map(barber => barber.daysAvailable))
-                const dailyBarbers = localBarbers.filter(barber => barber.daysAvailable.includes(this.state.apptDay))
-                console.log('daily', dailyBarbers);
                 console.log('localBarbers', localBarbers);
-                this.setState({ barbers: dailyBarbers })
+                console.log('day', this.state.apptDay)
+                let dailyBarbers = localBarbers.filter(barber => barber.daysAvailable.includes(this.state.apptDay))
+                console.log('daily', dailyBarbers);
+                this.setState({ barbers: dailyBarbers, displayVendors: true })
             })
             .catch(err => console.log(err));
     };

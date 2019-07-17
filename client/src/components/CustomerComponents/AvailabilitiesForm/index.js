@@ -19,7 +19,7 @@ class AvailabilitiesForm extends React.Component {
 
     render() {
         const times = this.props.timeSlots || [];
-        console.log('form barbersss', times.timeSlots);
+        // console.log('form barbersss', times.timeSlots);
         const TimesList = times.map(time => (
             <TimeSlotButton
                 handleChange={this.handleChange}

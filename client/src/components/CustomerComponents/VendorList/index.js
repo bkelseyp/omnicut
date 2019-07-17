@@ -14,7 +14,7 @@ class VendorList extends React.Component {
     }
 
     handleSelectBarber = chosen => {
-        console.log('chosen', chosen);
+        // console.log('chosen', chosen);
         // this.setState({ selectedBarber:  })
     }
 
@@ -36,7 +36,7 @@ class VendorList extends React.Component {
 
 
     render() {
-        console.log('vl props', this.props)
+        // console.log('vl props', this.props)
         // console.log('DummyBarbers', DummyBarbers);
         // console.log('props', this.props.barbers)
         // console.log('dummy', DummyBarbers)

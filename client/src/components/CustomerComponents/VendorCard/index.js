@@ -23,7 +23,7 @@ class VendorCard extends React.Component {
 
     render() {
         const times = this.props.times;
-        console.log('times', times);
+        // console.log('times', times);
         if (this.state.chosen) {
             return (
                 <div className='vendor-card col-md-4'>
