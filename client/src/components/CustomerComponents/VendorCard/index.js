@@ -4,26 +4,6 @@ import './style.css';
 import AvailabilitiesForm from '../AvailabilitiesForm';
 import TimeSlotButton from '../TimeSlotButton';
 
-// const VendorCard = props => {
-//     console.log('vc', props.timeSlots);
-//     // const times = props.timeSlots;
-//     return (
-//         <div className='vendor-card col-md-3'>
-//             <p><strong>Name: </strong>{props.name}</p>
-//             <p><strong>Base Price: </strong> {props.price}</p>
-//             <p><em>"{props.message}"</em></p>
-//             <div className='d-flex justify-content-center'>
-//                 <ModalOpenBtn
-//                     HandleModalOpen={props.HandleModalOpen}
-//                     timeSlots={props.timeSlots}
-//                     handleSelectBarber={props.handleSelectBarber}
-//                     name={props.name}
-//                 />
-//             </div>
-//         </div>
-//     )
-// }
-
 class VendorCard extends React.Component {
     constructor(props) {
         super(props);
@@ -36,6 +16,10 @@ class VendorCard extends React.Component {
         this.setState({ chosen: true })
     }
 
+    handleCloseBarber = () => {
+        this.setState({ chosen: false })
+    }
+
 
     render() {
         const times = this.props.times;
@@ -43,9 +27,11 @@ class VendorCard extends React.Component {
         if (this.state.chosen) {
             return (
                 <div className='vendor-card col-md-4'>
-                    <h5 className='text-left'>{this.props.name}'s Availabilities</h5>
+                    <h5 className='text-center'>{this.props.name}'s Availabilities</h5>
                     <AvailabilitiesForm
                         timeSlots={times}
+                        handleCloseBarber={this.handleCloseBarber}
+                        handleBookAppt={this.props.handleBookAppt}
                     ></AvailabilitiesForm>
                     {/* <form>
                         <TimeForm timeSlots={times}></TimeForm>

@@ -2,6 +2,7 @@
     border: 2px solid black;
     /* margin: 10px; */
     min-width: 190px;
+    min-height: 300px;
 }
 
 .vendor-card:hover {
