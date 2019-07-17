@@ -1,9 +1,16 @@
 .filter-wrapper {
-    border: 2px solid green;
+    background-color: #666;
+    color: white;
     text-align: center;
-    height: 380px;
+    height: 400px;
+    padding: 15px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.5);
 }
 
 label:hover {
     transform: scale(1.05);
+}
+
+hr {
+    border-color: #ddd;
 }

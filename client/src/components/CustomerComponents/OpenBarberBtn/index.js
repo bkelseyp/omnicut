@@ -6,7 +6,7 @@ const OpenBarberBtn = props => {
 
     console.log('passed times', props.timeSlots);
     return (
-    <button className='book-vendor-btn btn btn-lrg' onClick={props.handleOpenBarber}>Availabilities</button>
+    <button className='book-vendor-btn btn btn-lrg rounded-pill btn-light' onClick={props.handleOpenBarber}>Availabilities</button>
 )}
 
 export default OpenBarberBtn;

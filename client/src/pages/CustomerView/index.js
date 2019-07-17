@@ -5,7 +5,6 @@ import BookApptWrapper from '../../components/CustomerComponents/BookApptWrapper
 const CustomerView = () => (
     <>
         {/* <CustAppointmentsWrapper /> */}
-        
         <BookApptWrapper />
     </>
 );

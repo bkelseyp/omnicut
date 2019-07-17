@@ -1,7 +1,8 @@
 .zip-input-wrapper {
-    border: 2px solid red;
-    margin: 15px auto;
-    width: 70%;   
+    margin: auto;
+    width: 100%;   
+    margin-bottom: 50px;
+    box-shadow: 0px 2px 2px rgba(0,0,0,.5);
 }
 
 .flex-row {
@@ -12,4 +13,9 @@
 
 .zip-message {
     color: #f00;
+    /* background-color: rgba(0,0,0,.4); */
+    text-shadow: 2px 2px 1px rgba(0,0,0,.5);
+    min-width: 200px;
+    max-width: 400px;
+    margin:auto;
 }
