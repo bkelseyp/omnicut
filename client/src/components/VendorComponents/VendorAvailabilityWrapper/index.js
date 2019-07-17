@@ -7,7 +7,8 @@ class VendorAvailabilityWrapper extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            setAvailabilityView: false
+            setAvailabilityView: false,
+            formData: ''
         }
     }
 
@@ -15,6 +16,11 @@ class VendorAvailabilityWrapper extends React.Component {
         this.state.setAvailabilityView ?
             this.setState({ setAvailabilityView: false }) :
             this.setState({ setAvailabilityView: true })
+    }
+
+    passAvailability = (passedForm) => {
+        console.log('passed', passedForm);
+        this.setState({ formData: passedForm })
     }
 
     render() {
@@ -26,8 +32,12 @@ class VendorAvailabilityWrapper extends React.Component {
                 />
                 {/* If setAvailabilityView is set to true, render SetVendorAvailability component */}
                 {this.state.setAvailabilityView ?
-                <SetVendorAvailability />:
-                <ViewVendorAvailability /> 
+                <SetVendorAvailability 
+                    passAvailability={this.passAvailability}
+                />:
+                <ViewVendorAvailability 
+                    formData={this.state.formData}
+                /> 
                 }
             </div>
         )

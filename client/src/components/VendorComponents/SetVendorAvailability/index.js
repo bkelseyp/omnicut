@@ -34,7 +34,10 @@ class SetVendorAvailability extends React.Component {
 
     handleSetAvailability = event => {
         event.preventDefault();
-        alert(this.state.formData.sundayStart);
+        // alert(this.state.formData.sundayStart);
+        const barberAvailability = this.state.formData;
+        this.props.passAvailability(barberAvailability);
+        // console.log('b', barberAvailability);
     }
 
     render() {
