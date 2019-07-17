@@ -3,6 +3,7 @@ import BookApptBtn from '../BookApptBtn';
 import ZipInputWrapper from '../ZipInputWrapper';
 import VendorWrapper from '../VendorWrapper';
 import './style.css';
+import CustAppointmentsWrapper from '../CustAppointmentsWrapper';
 // import smooth scroll package
 import * as Scroll from 'react-scroll';
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
@@ -18,11 +19,16 @@ class BookApptWrapper extends React.Component {
             displayZipMessage: false,
             zipErrorBorder: false,
             // Weekday checkboxes
-            clientZip: ''
+            clientZip: '',
+            isBooked: false
         }
     };
 
-   
+    handleBookAppt = event => {
+        console.log('HIT');
+        event.preventDefault();
+        this.setState({ isBooked: true, displayZipInput: false });
+    }
 
     HandleDisplayZip = () => {
         scroll.scrollTo(200);
@@ -73,15 +79,28 @@ class BookApptWrapper extends React.Component {
                             apptDay={this.state.apptDay}
                             handleFilterChange={this.handleFilterChange}
                             clientZip={this.state.clientZip}
+                            handleBookAppt={this.handleBookAppt}
                         />
                     </Element>
                 </>
             )
+        } else if (this.state.isBooked) {
+            return (
+                <div className="m-5">
+                    <h1 className="text-center">Your appointment has been booked!</h1>
+                    <h3 className="text-center">Thank you for using OmniCut</h3>
+                    <CustAppointmentsWrapper />
+                </div>
+            )
         } else {
             return (
-                <BookApptBtn
-                    HandleDisplayZip={this.HandleDisplayZip}
-                />
+                <div className="container m-5">
+                    <h1 className="text-center">Welcome to OmniCut!</h1>
+                    <h4 className="text-center">We're glad you're here! To get started on your way to a great new haircut, click the button below.</h4>
+                    <BookApptBtn
+                        HandleDisplayZip={this.HandleDisplayZip}
+                    />
+                </div>
             )
         }
     }

@@ -53,10 +53,10 @@ class VendorWrapper extends React.Component {
 
     render() {
         if (this.props.displayVendors === true) {
-            console.log('times', this.state.barbers[0])
+            console.log('vw props', this.props);
             return (
                 <>
-                    <div className='vendor-wrapper container d-flex flex-wrap generic-body-font'>
+                    <div className='vendor-wrapper container d-flex flex-wrap generic-body-font mb-5'>
                         <FilterWrapper
                             apptDay={this.state.apptDay}
                             handleFilterChange={this.handleFilterChange}
@@ -65,6 +65,7 @@ class VendorWrapper extends React.Component {
                             HandleModalOpen={this.HandleModalOpen}
                             loadBarbers={this.loadBarbers}
                             barbers={this.state.barbers}
+                            handleBookAppt={this.props.handleBookAppt}
                         />
                     </div>
                 </>
