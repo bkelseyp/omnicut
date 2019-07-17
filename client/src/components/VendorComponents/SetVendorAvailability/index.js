@@ -43,7 +43,7 @@ class SetVendorAvailability extends React.Component {
     render() {
         return (
             <>
-                <h3 className='selectPageHeader text-center my-3 mt-5 mb-3'>Set availability</h3>
+                <h3 className='selectPageHeader text-center my-3 mt-5 mb-3'>Set your availability</h3>
                 <div className='d-flex justify-content-center mb-5 mt-5'>
                     <form onSubmit={this.handleSetAvailability}>
                         <VendorTimeSelect header="Sunday" formData={() => this.state.formData} handleFormChange={this.handleFormChange} />
