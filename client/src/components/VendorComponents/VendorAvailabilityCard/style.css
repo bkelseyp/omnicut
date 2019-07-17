@@ -17,3 +17,8 @@ light: #dedbd0
     font-size: small;
     margin-top: 2vh;  
 }
+
+.vendor-availability-card {
+    background-color: #3696a2;
+    box-shadow: 2px 2px 1px rgba(0,0,0,.5);
+}

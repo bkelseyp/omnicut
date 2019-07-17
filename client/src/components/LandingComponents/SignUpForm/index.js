@@ -29,11 +29,12 @@ class SignUpForm extends React.Component {
 render(props) {
     console.log(this.state.isVendor)
     return (
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className='formMargin'>
             <div className='LoginWrapper mb-2'>
-                <h1 className="welcome-header">Join Now</h1>
-                <h3 className="welcome-subHeader">Sign Up</h3>
-                <div className='InnerForm'>
+                <h1 className="welcome-header mt-5">Join Now</h1>
+                <h3 className="welcome-subHeader mb-2">Sign Up</h3>
+                
+                <div className=''>
 
                     <div className="form-group">
                         <label htmlFor="InputName">Name</label>
