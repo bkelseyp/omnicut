@@ -19,18 +19,11 @@ class BookApptWrapper extends React.Component {
             showBookingModal: false,
             zipErrorBorder: false,
             // Weekday checkboxes
-            apptDay: 'all',
             clientZip: ''
         }
     };
 
-    // sets state every time the filter boxes change.
-    handleFilterChange = event => {
-        alert(event.target.value);
-        this.setState({
-            apptDay: event.target.value
-        });
-    }
+   
 
     HandleDisplayZip = () => {
         scroll.scrollTo(200);
@@ -50,7 +43,6 @@ class BookApptWrapper extends React.Component {
         } else {
             this.setState({ displayZipMessage: true, zipErrorBorder: true })
         }
-
     };
 
     // These methods handle opening and closing of the modal for booking

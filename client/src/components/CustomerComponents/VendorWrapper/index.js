@@ -13,12 +13,21 @@ class VendorWrapper extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            barbers: []
+            barbers: [],
+            apptDay: 'all'
         }
         const date = new Date();
         const dayOfWeek = date.getDay()
         console.log('date:', date);
         console.log('day of week:', dayOfWeek);
+    }
+
+     // sets state every time the filter boxes change.
+     handleFilterChange = event => {
+        this.setState({
+            apptDay: event.target.value
+        });
+        this.loadBarbers();
     }
 
     loadBarbers = () => {
@@ -30,8 +39,13 @@ class VendorWrapper extends React.Component {
                 const localClientZip = parseInt(this.props.clientZip);
                 const localBarbers = res.data.filter(barber => barber.zipcode === localClientZip);
                 // localBarbers.toString();
+
+                // console.log('test', localBarbers.map(barber => barber.daysAvailable))
+
+                const dailyBarbers = localBarbers.filter(barber => barber.daysAvailable.includes(this.state.apptDay))
+                console.log('daily', dailyBarbers);
                 console.log('localBarbers', localBarbers);
-                this.setState({ barbers: localBarbers })
+                this.setState({ barbers: dailyBarbers })
             })
             .catch(err => console.log(err));
     };
@@ -42,9 +56,8 @@ class VendorWrapper extends React.Component {
                 <>
                     <div className='vendor-wrapper container d-flex flex-wrap generic-body-font'>
                         <FilterWrapper
-                            apptDay={this.props.apptDay}
-                            handleFilterChange={this.props.handleFilterChange}
-
+                            apptDay={this.state.apptDay}
+                            handleFilterChange={this.handleFilterChange}
                         />
                         <VendorList
                             HandleModalOpen={this.props.HandleModalOpen}
