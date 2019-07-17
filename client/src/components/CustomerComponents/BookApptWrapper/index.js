@@ -7,6 +7,8 @@ import CustAppointmentsWrapper from '../CustAppointmentsWrapper';
 // import smooth scroll package
 import * as Scroll from 'react-scroll';
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import API from '../../../utils/API.js';
+
 
 
 class BookApptWrapper extends React.Component {
@@ -37,17 +39,38 @@ class BookApptWrapper extends React.Component {
 
     HandleDisplayVendors = clientZip => {
         // This block below varifies that the input is 5 digits long. If not, it displays a message to user.
-        const userZip = document.getElementById('zip-input').value;
+        // const userZip = document.getElementById('zip-input').value;
         const zipREGEX = /^\d{5}$/;
         // test method returns true or false
-        const zipResult = zipREGEX.test(userZip);
+        const zipResult = zipREGEX.test(clientZip);
         // Scroll down to vendor wrapper
-        scroll.scrollTo(530);
         if (zipResult) {
+            scroll.scrollTo(530);
             this.setState({ displayVendors: true, displayZipMessage: false, zipErrorBorder: false, clientZip: clientZip })
+            this.loadBarbers()
         } else {
             this.setState({ displayZipMessage: true, zipErrorBorder: true })
         }
+    };
+
+    loadBarbers = () => {
+        console.log('func call')
+        API.getBarbers()
+            .then(res => {
+                // console.log('zip in vendorWrapper', this.props.clientZip);
+                console.log('res', res.data);
+                const localClientZip = parseInt(this.state.clientZip);
+                console.log('client zip', localClientZip);
+                const localBarbers = res.data.filter(barber => barber.zipcode === localClientZip);
+                // localBarbers.toString();
+
+                // console.log('test', localBarbers.map(barber => barber.daysAvailable))
+                const dailyBarbers = localBarbers.filter(barber => barber.daysAvailable.includes(this.state.apptDay))
+                console.log('daily', dailyBarbers);
+                console.log('localBarbers', localBarbers);
+                this.setState({ barbers: dailyBarbers })
+            })
+            .catch(err => console.log(err));
     };
 
     // // These methods handle opening and closing of the modal for booking

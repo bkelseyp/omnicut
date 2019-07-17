@@ -32,6 +32,7 @@ class SetVendorAvailability extends React.Component {
         })
     }
 
+
     handleSetAvailability = event => {
         event.preventDefault();
         // alert(this.state.formData.sundayStart);
