@@ -34,7 +34,7 @@ class AvailabilitiesForm extends React.Component {
         return (
             <form className='availabilities-wrapper' onSubmit={this.props.handleBookAppt}>
                 <div>
-                    <div className='time-slot-buttons text-center mb-3 d-flex flex-wrap'>
+                    <div className='time-slot-buttons text-center mb-3 d-flex flex-wrap justify-content-center'>
                         {TimesList}
                     </div>
                     {/* <div className='d-flex justify-content-center'>
