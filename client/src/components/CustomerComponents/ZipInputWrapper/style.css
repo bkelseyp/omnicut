@@ -10,12 +10,34 @@
     justify-content: center;
     margin: 10px;
 }
+/* OmniCut Colors 
+
+darker: #1a1f1d;
+client: #264c59;
+vendor: #3696a2 
+accent: #6b857e
+pink: #eb857e
+light: #dedbd0
+
+*/
 
 .zip-message {
-    color: #f00;
+    color: #e75440;
     /* background-color: rgba(0,0,0,.4); */
-    text-shadow: 2px 2px 1px rgba(0,0,0,.5);
+    text-shadow: 1px 1px 1px #264c59;
     min-width: 200px;
     max-width: 400px;
     margin:auto;
+}
+.subBtnZip {
+        font-family: 'Open Sans', sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: medium;    
+}
+
+.questZip {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
 }

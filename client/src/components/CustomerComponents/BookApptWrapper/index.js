@@ -117,9 +117,9 @@ class BookApptWrapper extends React.Component {
             )
         } else {
             return (
-                <div className="container m-5">
-                    <h1 className="text-center">Welcome to OmniCut!</h1>
-                    <h4 className="text-center">We're glad you're here! To get started on your way to a great new haircut, click the button below.</h4>
+                <div className="container mt-5">
+                    <h1 className="customerFont text-center">Welcome to OmniCut!</h1>
+                    <p className="text-center customerBodyFont mt-3">We're glad you're here! To get started on your way to a great new haircut, click the button below.</p>
                     <BookApptBtn
                         HandleDisplayZip={this.HandleDisplayZip}
                     />

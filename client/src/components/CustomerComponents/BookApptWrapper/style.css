@@ -10,5 +10,24 @@
 }
 
 body {
-    background-color: #dedbd0;
+background-color: #dedbd0;
+    /* background: url('/images/langing001.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover; */
+    /* height: 300px; */
 }
+
+.customerFont {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 20vh;
+}
+
+.customerBodyFont {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
