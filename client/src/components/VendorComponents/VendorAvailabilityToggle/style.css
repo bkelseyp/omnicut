@@ -1,5 +1,6 @@
 .not-checked-custom {
     font-size: 1.2em;
+    color: #3696a2;
 }
 
 #notAvailToggle {
@@ -14,5 +15,12 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: medium;  
+    font-size: medium;
+    background-color: #3696a2;
+    border: 1px solid #3696a2;
+}
+
+.availToggle:hover {
+    background-color: #4ca2ac;
+    border: 1px solid #4ca2ac;
 }
