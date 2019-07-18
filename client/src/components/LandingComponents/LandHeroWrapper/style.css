@@ -26,11 +26,11 @@ light: #dedbd0
     font-family: 'Open Sans', sans-serif;
     font-size: small;
 }
-.Hero-header-text {
+.Hero-header-copy {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    margin-top: 7vh;
+    margin-top: 10vh;
 }
 
 .Hero-wrapper2 {
@@ -55,4 +55,29 @@ light: #dedbd0
     text-transform: uppercase;
     font-size: small;
 
+}
+
+#secBkgndImg1 {
+    background: url('/images/langing001.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height: 400px;
+}
+
+.secWrapper{
+
+    background-color: #3696a2;
+    padding-left: 10vh;
+    padding-right: 10vh;
+
+}
+#secBkgndImg2 {
+    background: url('/images/langing005.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height: 400px;
 }
