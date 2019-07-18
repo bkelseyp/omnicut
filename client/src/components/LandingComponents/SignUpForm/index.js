@@ -40,7 +40,7 @@ axios.post('/api/barber', newBarber)
       })
 
     }
-    
+    // test for commit
     handleInputChange = event => {
         // Pull the name and value properties off of the event.target (the element which triggered the event)
         const { name, value } = event.target;
