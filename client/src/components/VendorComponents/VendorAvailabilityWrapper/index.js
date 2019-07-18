@@ -20,7 +20,7 @@ class VendorAvailabilityWrapper extends React.Component {
 
     passAvailability = (passedForm) => {
         console.log('passed', passedForm);
-        this.setState({ formData: passedForm })
+        this.setState({ formData: passedForm, setAvailabilityView: false })
     }
 
     render() {
