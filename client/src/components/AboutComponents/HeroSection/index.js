@@ -129,7 +129,7 @@ class HeroSection extends React.Component {
 <br />
 These classes gave me exposure to programs like MS SQL Server, JavaScript, Capsim, Powerpoint, Excel, Word, and Access. All this time spent on the computer sparked my interest in how programs run and the design process invovled when creating them. As result I used this past summer to teach myself how to code and decided this was a passion worth pursuing. Today I am currently enrolled at the Penn LPS Coding bootcamp in Philadelphia with the hopes of becoming a Fullstack Developer.</p>
                                         <h6>Github:  <a href='https://github.com/JasonPob' target="_blank">https://github.com/JasonPob </a></h6>
-                                        <h6>Portfolio:  <a href='https://jasonpob.github.io/Fullstack-Portfolio/' target="_blank">https://jasonpob.github.io/Fullstack-Portfolio/ </a></h6>
+                                        <h6>Portfolio:  <a href='https://jasonpob.github.io/Developer-Portfolio/' target="_blank">https://jasonpob.github.io/Fullstack-Portfolio/ </a></h6>
                                     </div>
                                 </div>
 
