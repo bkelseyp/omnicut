@@ -117,7 +117,7 @@ class BookApptWrapper extends React.Component {
             )
         } else {
             return (
-                <div className="container m-5">
+                <div className="m-5">
                     <h1 className="text-center">Welcome to OmniCut!</h1>
                     <h4 className="text-center">We're glad you're here! To get started on your way to a great new haircut, click the button below.</h4>
                     <BookApptBtn

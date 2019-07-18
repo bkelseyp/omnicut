@@ -1,3 +1,11 @@
 .book-appt-btn {
     min-width: 300px;
+    background-color: #3696a2;
+    border: 1px solid #3696a2;
+    cursor: pointer;
+}
+
+.book-appt-btn:hover {
+    background-color: #318792;
+    border: 1px solid #318792;
 }

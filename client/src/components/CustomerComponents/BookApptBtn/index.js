@@ -4,7 +4,7 @@ import './style.css';
 const BookApptBtn = props => (
     <>
         <div className='btn-wrapper'>
-            <button className='book-appt-btn btn-lg btn-primary rounded-pill' onClick={props.HandleDisplayZip}>Book an Appointment</button>
+            <button className='book-appt-btn btn-lg text-white rounded-pill' onClick={props.HandleDisplayZip}>Book an Appointment</button>
         </div>
     </>
 )

@@ -23,14 +23,14 @@ function Nav() {
         </ul>
         <ul className="navbar-nav">
           <li className="nav-item ">
-            <a className="nav-link textColor text-primary" href="/LogIn">
-              Log In <span className="sr-only">(current)</span>
+            <a className="nav-link textColor" href="/LogIn">
+              Log In <span className="sr-only textColor">(current)</span>
             </a>
           </li>
 
           <li className="nav-item">
-            <a className="nav-link textColor text-primary" href="/SignUp">
-              Sign Up <span className="sr-only">(current)</span>
+            <a className="nav-link textColor" href="/SignUp">
+              Sign Up <span className="sr-only textColor">(current)</span>
             </a>
           </li>
         </ul>
