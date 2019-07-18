@@ -2,6 +2,8 @@ var mongoose = require('mongoose');
 
 var BarberSchema = 
 new mongoose.Schema({
+    daysAvailable: {type: Array, required: true},
+    timesAvailable: {type: Array, required: true},
     name: {type: String, required: true},
     email: {type: String, required: true},
     password: {type: String, required: true},
@@ -10,14 +12,14 @@ new mongoose.Schema({
     isVendor: {type: Boolean, required: false},
     basePrice: {type: Number, required: false},
     bio: {type: String, required: false},
-    availabilities: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Availabilities"
-    }],
-    appointments: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Appointments"
-    }],
+    // availabilities: [{
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: "Availabilities"
+    // }],
+    // appointments: [{
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: "Appointments"
+    // }],
     // appointmentPrice:{
     //     type: Number,
     //     required: true
