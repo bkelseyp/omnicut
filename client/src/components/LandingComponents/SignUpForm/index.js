@@ -5,13 +5,48 @@ class SignUpForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isVendor: false
+            isVendor: false,
+            name: '',
+            email: '',
+            password: '',
+            zipcode: 0,
+            basePrice: 0,
+            bio: ''
         }
     }
 
-    handleSubmit = () => {
-        alert('SUBMITTED!');
+    handleSubmit = event => {
+        event.preventDefault();
+        // When form is submitted, we create a newBarber object, containing the values from the user. 
+        // This should then be passed through axios 
+        const newBarber = {
+            name: this.state.name,
+            email: this.state.email,
+            password: this.state.password,
+            zipcode: this.state.zipcode,
+            basePrice: this.state.basePrice,
+            bio: this.state.bio
+        }
+        console.log(newBarber);
+// =========================================================
+//JASON - this is where the submit functionality should live
+// =========================================================
+
+
     }
+    
+    handleInputChange = event => {
+        // Pull the name and value properties off of the event.target (the element which triggered the event)
+        const { name, value } = event.target;
+    
+        // Set the state for the appropriate input field
+        this.setState({
+          [name]: value
+        });
+        
+      };
+
+
     handleVendorClick = (event) => {
         const target = event.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
@@ -27,39 +62,36 @@ class SignUpForm extends React.Component {
 }
 
 render(props) {
-    console.log(this.state.isVendor)
+    // console.log(this.state.isVendor)
     return (
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className='formMargin'>
             <div className='LoginWrapper mb-2'>
-                <h1 className="welcome-header">Join Now</h1>
-                <h3 className="welcome-subHeader">Sign Up</h3>
-                <div className='InnerForm'>
+                <h1 className="welcome-header mt-5">Join Now</h1>
+                <h3 className="welcome-subHeader mb-2">Sign Up</h3>
+                
+                <div className=''>
 
                     <div className="form-group">
                         <label htmlFor="InputName">Name</label>
-                        <input name='name' type="name" className="form-control" id="InputName" placeholder="Jane Doe" />
+                        <input name='name' onChange={this.handleInputChange} type="name" className="form-control" id="InputName" placeholder="Jane Doe" />
                     </div>
                     <div className="form-group">
                         <label htmlFor="exampleInputEmail1">Email address</label>
-                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" />
+                        <input  name="email" onChange={this.handleInputChange} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" />
                         <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                     </div>
                     <div className="form-group">
                         <label htmlFor="InputPassword">Password</label>
-                        <input type="text" className="form-control" id="InputPassword" placeholder="Password" />
+                        <input type="text" name="password" onChange={this.handleInputChange} className="form-control" id="InputPassword" placeholder="Password" />
                     </div>
                     <div className="form-group">
                         <label htmlFor="InputZip">Zipcode</label>
-                        <input type="number" className="form-control" id="InputZip" placeholder="12345" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="exampleFormControlFile1">Upload your Photo</label>
-                        <input type="file" className="form-control-file" id="exampleFormControlFile1" />
+                        <input type="number" name="zipcode" onChange={this.handleInputChange} className="form-control" id="InputZip" placeholder="12345" />
                     </div>
 
                     {/* Vendor Question Section --> */}
                     <div className="form-group">
-                        <label htmlFor="formGroupExampleInput">Click yes if you're a vendor? </label>
+                        <label htmlFor="formGroupExampleInput">Click yes if you're a vendor! </label>
                         <br />
                         <div className="form-check form-check-inline">
                             <input
@@ -80,11 +112,11 @@ render(props) {
                         <>
                             <div className="form-group displayVendor">
                                 <label htmlFor="InputPrice">Base Price</label>
-                                <input type="number" className="form-control" id="InputPrice" placeholder="$$$" />
+                                <input type="number" name='basePrice' onChange={this.handleInputChange} className="form-control" id="InputPrice" placeholder="$$$" />
                             </div>
                             <div className="form-group displayVendor">
                                 <label htmlFor="FormControlTextarea1">Bio</label>
-                                <textarea className="form-control" id="FormControlTextarea1" rows="3"></textarea>
+                                <textarea className="form-control" name="bio" onChange={this.handleInputChange} id="FormControlTextarea1" rows="3"></textarea>
                             </div>
                         </>
                     }

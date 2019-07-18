@@ -1,13 +1,15 @@
 import React from 'react';
+import './style.css';
 
 const VendorTimeSelect = props => {
     return (
-        <div class="form-group border p-3">
-            <h4 className='text-center'>{props.header}</h4>
-            <label for="exampleFormControlSelect1">Start time:</label>
+
+        <div class="form-group rounded p-5 Hero-wrapper vendor-scheduling-card">
+            <h4 className='text-center text-white'>{props.header}</h4>
+            {/* <label for="exampleFormControlSelect1" className="text-white">Start time:</label> */}
             <select value={props.formData[props.header.toLowerCase() + 'Start']} onChange={(e) => props.handleFormChange(e, props.header.toLowerCase(), 'Start')}
                 className="form-control mb-3" id="exampleFormControlSelect1">
-                <option>Select a start time</option>
+                <option> Select a start time</option>
                 <option>1:00am</option>
                 <option>2:00am</option>
                 <option>3:00am</option>
@@ -33,9 +35,10 @@ const VendorTimeSelect = props => {
                 <option>11:00pm</option>
                 <option>12:00am</option>
             </select>
+            {/* <label for="exampleFormControlSelect2" className="text-white">End time:</label> */}
             <select value={props.formData[props.header.toLowerCase() + 'End']} onChange={(e) => props.handleFormChange(e, props.header.toLowerCase(), 'End')}
-                className="form-control" id="exampleFormControlSelect1">
-                <option>Select a end time</option>
+                className="form-control" id="exampleFormControlSelect2">
+                <option>Select an end time</option>
                 <option>1:00am</option>
                 <option>2:00am</option>
                 <option>3:00am</option>

@@ -10,66 +10,46 @@ class AvailabilitiesForm extends React.Component {
         }
     }
 
-    handleBookAppt = () => {
-        alert('SUBMITTED!');
-    }
+
 
     handleChange = event => {
         this.setState({ timeSlot: event.target.value })
     }
 
 
-    render(props) {
-        console.log(this.state.timeSlot)
+    render() {
+        const times = this.props.timeSlots || [];
+        // console.log('form barbersss', times.timeSlots);
+        const TimesList = times.map(time => (
+            <TimeSlotButton
+                handleChange={this.handleChange}
+                timeSlot={this.state.timeSlot}
+            >
+                {time}
+            </TimeSlotButton>
+        ))
+
         // I guess this will contain the available times logic when we know what the data will look like...
-        let availableTimes = [];
 
         return (
-            <form onSubmit={this.handleBookAppt}>
-                <div className='availabilities-wrapper p-3'>
-                    <h3>Availabilities:</h3>
-                    <hr />
-                    <div className='time-slot-buttons text-center mb-3'>
-                        {/* Children will eventually be {this.whatever} */}
-                        <TimeSlotButton
-                            handleChange={this.handleChange}
-                            timeSlot={this.state.timeSlot}
-                        >
-                            9:00am
-                        </TimeSlotButton>
-                        <TimeSlotButton
-                            handleChange={this.handleChange}
-                            timeSlot={this.state.timeSlot}
-                        >
-                            11:00am
-                        </TimeSlotButton>
-                        <TimeSlotButton
-                            handleChange={this.handleChange}
-                            timeSlot={this.state.timeSlot}
-                        >
-                            12:00pm
-                        </TimeSlotButton>
-                        <TimeSlotButton
-                            handleChange={this.handleChange}
-                            timeSlot={this.state.timeSlot}
-                        >
-                            1:00pm
-                        </TimeSlotButton>
-                        <TimeSlotButton
-                            handleChange={this.handleChange}
-                            timeSlot={this.state.timeSlot}
-                        >
-                            3:00pm
-                        </TimeSlotButton>
+            <form className='availabilities-wrapper' onSubmit={this.props.handleBookAppt}>
+                <div>
+                    <div className='time-slot-buttons text-center mb-3 d-flex flex-wrap justify-content-center'>
+                        {TimesList}
                     </div>
-                    <div className='d-flex justify-content-center'>
+                    {/* <div className='d-flex justify-content-center'>
                         <h4>Note to vendor:</h4>
-                    </div>
+                    </div> */}
                     <div className='d-flex justify-content-center'>
                         <textarea placeholder='Enter message' className='vendor-message-input'></textarea>
                     </div>
                     <div className='d-flex justify-content-center mt-4'>
-                        <button type="submit">Book</button>
+                        <div className="col-6">
+                            <button onClick={this.props.handleCloseBarber} className='btn btn-lrg btn-light rounded-pill mx-1 mb-2'>Back</button>
+                        </div>
+                        <div className="col-6">
+                            <button type="submit" className='btn btn-lrg btn-light rounded-pill mx-1 mb-2'>Book</button>
+                        </div>
                     </div>
                 </div>
             </form>

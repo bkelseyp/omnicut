@@ -9,6 +9,24 @@ light: #dedbd0
 
 */
 
+.aboutBkgndColor {
+    background-color: #6b857e;
+}
+
+.bkgndWrapper {
+    background-color: #dedbd0;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.devNameFont {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
 .Hero-subHeader {
     text-transform: uppercase;
     font-weight: 700;
@@ -38,4 +56,13 @@ light: #dedbd0
     padding-top: 5vh;
     padding-bottom: 5vh;
     text-align: center;
+}
+
+#secBkgndImg3 {
+    background: url('/images/Barber-02.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height: 300px;
 }

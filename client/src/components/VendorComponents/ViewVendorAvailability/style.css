@@ -9,24 +9,25 @@ light: #dedbd0
 
 */
 
-.brandLogo {
-    font-family: 'Ultra', serif;
-    font-size: x-large;
-}
-
-.brandPageNames {
+.availPageHeader {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: small;  
+
 }
-.textColor {
+
+.availToggle {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: small;  
+    font-size: medium;  
 }
 
-.bkgndNavbar {
-    background-color: #dedbd0;
+.About-header-text {
+    /* font-family: 'Ultra', serif; */
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 10vh;
+    margin-Bottom: 8vh;
 }

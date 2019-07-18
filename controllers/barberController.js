@@ -3,6 +3,7 @@ const db = require("../models");
 // Defining methods for the barberController
 module.exports = {
   findAll: function(req, res) {
+    console.log('hit controller')
     db.Barber.find(req.query)
       .then(dbBarber => res.json(dbBarber))
       .catch(err => res.status(422).json(err));

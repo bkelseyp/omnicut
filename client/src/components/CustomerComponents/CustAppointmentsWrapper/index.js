@@ -23,7 +23,7 @@ class CustAppointmentsWrapper extends React.Component {
         if (this.state.upcomingApptsView) {
             return (
                 <>
-                    <div className='cust-appointments-wrapper p-3 generic-body-font'>
+                    <div className='cust-appointments-wrapper p-3 generic-body-font Hero-wrapper'>
                         <div className='d-flex justify-content-between'>
                             <h3 className='cust-appointments-header-text brandLogo mt-3'>Your Upcoming Appointments</h3>
                             <div className='d-flex justify-content-end'>
@@ -40,7 +40,7 @@ class CustAppointmentsWrapper extends React.Component {
         } else {
             return (
                 <>
-                    <div className='cust-appointments-wrapper p-3 generic-body-font'>
+                    <div className='cust-appointments-wrapper p-3 generic-body-font Hero-wrapper'>
                         <div className='d-flex justify-content-between'>
                             <h3 className='cust-appointments-header-text brandLogo mt-3'>Your Past Appointments</h3>
                             <div className='d-flex justify-content-end'>
