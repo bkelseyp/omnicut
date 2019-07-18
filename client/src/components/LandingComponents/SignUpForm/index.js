@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css'
+import axios from 'axios';
 
 class SignUpForm extends React.Component {
     constructor(props) {
@@ -31,10 +32,15 @@ class SignUpForm extends React.Component {
 // =========================================================
 //JASON - this is where the submit functionality should live
 // =========================================================
-
+axios.post('/api/barber', newBarber)
+      .then((result) => {
+        console.log(result);
+      }) .catch((error) => {
+          console.log(error.response.data);
+      })
 
     }
-    
+    // test for commit
     handleInputChange = event => {
         // Pull the name and value properties off of the event.target (the element which triggered the event)
         const { name, value } = event.target;
