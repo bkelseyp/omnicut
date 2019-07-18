@@ -14,7 +14,3 @@ router
   .delete(appointmentController.remove);
 
 module.exports = router;
-
-
-
-
