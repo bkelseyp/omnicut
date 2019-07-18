@@ -70,7 +70,7 @@ class HeroSection extends React.Component {
                                 <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                     <div className="card-body">
                                         <p className=' About-body-text pr-3'>Full Stack Web Developer</p>
-                                        <p>I graduated from Bloomsburg University in 2013 with a Bachelor's Degree in English. I was hired and worked in publishing for the next several years. Although I was initially hired as an editor, my time at the company exposed me to the Adobe Creative Suite and gave me my first experience working with simple front end code. Until this point, I'd never considered myself a "computer person," but I started realizing that while coding can seem daunting, it's not impossible to learn and understand. With this mindset, I started to enjoy code more over time. <br /> After some varied results in teaching myself to code proficiently, I enrolled in the Penn LPS Coding Boot Camp to build onto my limited coding skill set. Upon completion of the program, I'll be seeking a job that will allow me to further develop my skills and knowledge. <br /> I consider myself a lifelong learner in both my professional and personal lives. Some of my hobbies aside from coding include playing guitar and bass, cooking, and photography..</p>
+                                        <p>Web developer with a background in content and multimedia development. Looking to continue growth in the tech field.</p>
                                         <h6>Github:  <a href='https://github.com/aevers3' target="_blank">https://github.com/aevers3 </a></h6>
                                         <h6>Portfolio:  <a href='https://aevers3.github.io/portfolio0619/' target="_blank">https://aevers3.github.io/portfolio0619/ </a></h6>
                                     </div>
@@ -87,7 +87,7 @@ class HeroSection extends React.Component {
                                 </div>
                                 <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                     <div className="card-body">
-                                        <p>Full Stack Web Developer</p>
+                                        <p>Front-End Web Developer</p>
                                         <p>Junior Full Stack Web Developer with working experiences as a Graphic Designer and a life-long commitment to continuous growth. Effective at combining creativity and problem solving to develop strategic, innovative and user-friendly applications. Known among colleagues for strong front-end capabilities and attention to detail no matter the complexity of the project. <br />
                                         Looking forward to combining development and design by taking the next step in my career. Particularly, a role that allows for growth and embraces research, strategy, and usability. With this perspective in mind, I approach problems from a broader all-inclusive point of view. I welcome all challenges and encourage new experiences. </p>
                                         <h6>Github:  <a href='https://github.com/bkelseyp' target="_blank">https://github.com/bkelseyp </a></h6>
@@ -126,10 +126,9 @@ class HeroSection extends React.Component {
                                     <div className="card-body">
                                         <p>Full Stack Web Developer</p>
                                         <p>In 2018 I graduated from the University of Delaware with a BS in Finance. During my time at UD I studied a large range of business topics including Fixed Income Securities, Information Systems, Strategic Management, Business Intelligence and Analytics, Capital Markets, Financial Investments, and International Finance.
-<br />
-These classes gave me exposure to programs like MS SQL Server, JavaScript, Capsim, Powerpoint, Excel, Word, and Access. All this time spent on the computer sparked my interest in how programs run and the design process invovled when creating them. As result I used this past summer to teach myself how to code and decided this was a passion worth pursuing. Today I am currently enrolled at the Penn LPS Coding bootcamp in Philadelphia with the hopes of becoming a Fullstack Developer.</p>
+<br /> These classes gave me exposure to programs like MS SQL Server, JavaScript, Capsim, Powerpoint, Excel, Word, and Access. All this time spent on the computer sparked my interest in how programs run and the design process invovled when creating them. As result I used this past summer to teach myself how to code and decided this was a passion worth pursuing. Today I am currently enrolled at the Penn LPS Coding bootcamp in Philadelphia with the hopes of becoming a Fullstack Developer.</p>
                                         <h6>Github:  <a href='https://github.com/JasonPob' target="_blank">https://github.com/JasonPob </a></h6>
-                                        <h6>Portfolio:  <a href='https://jasonpob.github.io/Developer-Portfolio/' target="_blank">https://jasonpob.github.io/Fullstack-Portfolio/ </a></h6>
+                                        <h6>Portfolio:  <a href='https://jasonpob.github.io/Developer-Portfolio/' target="_blank">https://jasonpob.github.io/Developer-Portfolio/ </a></h6>
                                     </div>
                                 </div>
 
