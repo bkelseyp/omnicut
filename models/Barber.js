@@ -7,9 +7,9 @@ new mongoose.Schema({
     password: {type: String, required: true},
     zipcode: {type: Number, required: true},
     image: {type: String, required: false},
-    isVendor: {type: Boolean, required: true},
-    basePrice: {type: Number, required: true},
-    bio: {type: String, required: true},
+    isVendor: {type: Boolean, required: false},
+    basePrice: {type: Number, required: false},
+    bio: {type: String, required: false},
     availabilities: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Availabilities"
