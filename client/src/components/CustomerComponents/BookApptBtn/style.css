@@ -1,3 +1,8 @@
 .book-appt-btn {
     min-width: 300px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: medium;
+   
 }
