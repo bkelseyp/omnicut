@@ -87,8 +87,8 @@ class HeroSection extends React.Component {
                                 </div>
                                 <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                     <div className="card-body">
-                                        <p>Front-End Web Developer</p>
-                                        <p>Junior Full Stack Web Developer with working experiences as a Graphic Designer and a life-long commitment to continuous growth. Effective at combining creativity and problem solving to develop strategic, innovative and user-friendly applications. Known among colleagues for strong front-end capabilities and attention to detail no matter the complexity of the project. <br />
+                                        <p>Full Stack Web Developer</p>
+                                        <p>Full Stack Web Developer with working experiences as a Graphic Designer and a life-long commitment to continuous growth. Effective at combining creativity and problem solving to develop strategic, innovative and user-friendly applications. Known among colleagues for strong front-end capabilities and attention to detail no matter the complexity of the project. <br />
                                         Looking forward to combining development and design by taking the next step in my career. Particularly, a role that allows for growth and embraces research, strategy, and usability. With this perspective in mind, I approach problems from a broader all-inclusive point of view. I welcome all challenges and encourage new experiences. </p>
                                         <h6>Github:  <a href='https://github.com/bkelseyp' target="_blank">https://github.com/bkelseyp </a></h6>
                                         <h6>Portfolio:  <a href='https://bkelseyp.github.io/portfolio-two/index.html' target="_blank">https://bkelseyp.github.io/portfolio-two/index.html </a></h6>

@@ -7,11 +7,11 @@ const LandingCarousel = props => {
         <>
 
         <div id="carouselExampleFade" className="carousel slide carousel-fade"  data-ride="carousel">
-            <div className="carousel-inner">
+            <div className="carousel-inner ">
                 
                 <div className="carousel-item ">
                     <img className="d-block w-100" src='/images/City-03.jpg' alt="Second slide" />
-                    <div className="carousel-caption d-none d-md-block">
+                    <div className="carousel-caption d-none d-md-block ">
                         <h5 id='carTitle'>Door to Door Service</h5>
                         <p id='carSubText'>Making your life easier with door to door service. You pick the location anywhere, anytime.</p>
                     </div>
