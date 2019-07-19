@@ -15,18 +15,14 @@
     "morgan": "^1.9.0",
     "passport": "^0.4.0",
     "passport-jwt": "^3.0.1",
-    "serve-favicon": "^2.4.5",
-    "engines": {
-      "node": "10.15.3",
-      "npm": "6.4.1"
-    }
+    "serve-favicon": "^2.4.5"
+  
   },
   "scripts": {
     "start": "react-scripts start",
-    "client": "cd client && npm run start",
-    "install": "cd client && npm install",
-    "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "keywords": [],
   "author": "",
