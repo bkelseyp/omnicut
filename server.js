@@ -31,7 +31,7 @@ app.set("view engine", "handlebars");
 app.use(routes);
 
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/barbershop";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://user:fumanchu1@ds253017.mlab.com:53017/heroku_fppj3lm1";
 
 console.log(MONGODB_URI);
 
