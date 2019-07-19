@@ -1,44 +1,31 @@
-// Web Scraper Homework Solution Example
-// (be sure to watch the video to see
-// how to operate the site in the browser)
-// -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
+const express = require("express");
 
-// Require our dependencies
-var express = require("express");
-var mongoose = require("mongoose");
-var exphbs = require("express-handlebars");
+const mongoose = require("mongoose");
+const routes = require("./routes");
+const app = express();
+const PORT = process.env.PORT || 3001;
 
-// Set up our port to be either the host's designated port, or 3000
-var PORT = process.env.PORT || 3001;
-
-// Instantiate our Express App
-var app = express();
-
-// Require our routes
-var routes = require("./routes");
-
-// Parse request body as JSON
+// Configure body parsing for AJAX requests
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// Make public a static folder
-app.use(express.static("public"));
+// Serve up static assets
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
-// Connect Handlebars to our Express app
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
-
-// Have every request go through our route middleware
+// Add routes, both API and view
 app.use(routes);
 
-// If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://user1:fumanchu1@ds253017.mlab.com:53017/heroku_fppj3lm1";
-
-console.log(MONGODB_URI);
-
 // Connect to the Mongo DB
-mongoose.connect(MONGODB_URI);
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://user1:fumanchu1@ds253017.mlab.com:53017/heroku_fppj3lm1",
+  {
+    useCreateIndex: true,
+    useNewUrlParser: true
+  }
+);
 
-// Listen on the port
-app.listen(PORT, function() {
-  console.log("Listening on port: " + PORT);
-});
+// Start the API server
+app.listen(PORT, () =>
+  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`)
+);
