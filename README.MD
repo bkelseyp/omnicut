@@ -1,4 +1,5 @@
 # omnicut
+https://omnicut.herokuapp.com/
 
  
 # What is OmniCut?
@@ -27,7 +28,7 @@ Portfolio: [https://aevers3.github.io/portfolio0619/](https://aevers3.github.io/
 ## Brianna Kelsey
 <img src="https://github.com/DanMBau/omnicut/blob/master/images/bk.jpeg" width="100" height="100">
 
-Junior Full Stack Web Developer with working experiences as a Graphic Designer and a life-long commitment to continuous growth. Effective at combining creativity and problem solving to develop strategic, innovative and user-friendly applications. Known among colleagues for strong front-end capabilities and attention to detail no matter the complexity of the project.
+Full Stack Web Developer with working experiences as a Graphic Designer and a life-long commitment to continuous growth. Effective at combining creativity and problem solving to develop strategic, innovative and user-friendly applications. Known among colleagues for strong front-end capabilities and attention to detail no matter the complexity of the project.
 
 Looking forward to combining development and design by taking the next step in my career. Particularly, a role that allows for growth and embraces research, strategy, and usability. With this perspective in mind, I approach problems from a broader all-inclusive point of view. I welcome all challenges and encourage new experiences.
 
